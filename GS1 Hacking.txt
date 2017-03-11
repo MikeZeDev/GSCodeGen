@@ -1,0 +1,277 @@
+Adresse des items de Vlad : 020005D8
+
+un item se definit sur 2 bytes : 
+
+xxyy  
+xx: type de l'objet
+yy: quantité/equipé?
+
+la quantité est spéciale : 00 = 1 objet, 08 = 2, 0x10 = 3 et ainsi de suite (+1 objet <> + 8 valeur)
+yy est à 02 si l'objet est equipé (normalement pas cumulable avec un quantité autre que 1 (soit 00)
+Pour equiper un item multiple (si c'est possible) il faudrait ajouter quantité (0,0x8,0x10,etc) + 02 (flag "équipé")
+
+De plus les objets de la liste secondaire s'obtiennent grace a une combinaison spéciale ou yy = 01
+Ainsi pour obtenir l'anneau clérical vous devez mettre xx = 0C et yy = 01 (sinon l'item 0C est inexistant)
+
+
+Tableau des objets : 
+-----------------------
+
+00:?? // Hyper bottes
+01:Epée Longue // Bottes de hâte
+02:Glaive //  Bottes fourrées
+03:Claymore // Bottes Tortues
+04:Espadon
+05:Shamshir
+06:Lame d'argent //Anneau Mystique
+07:Masamune  // Anneau Guerrier
+08:Lame artique // Anneau Repos
+09:Lame Gaia // Anneau de soin
+0A:Lame Solaire // Anneau licorne
+0B:Murasama (Maudit) // Anneau féerique
+0C:??  //  Anneau Clérical
+0D:??
+0E:??
+0F:Machette
+10:Epée courte
+11:Coutelas
+12:Rapière
+13:Rapière effilée
+14:Ninja-to
+15:Epée de vitesse
+16:Rapière elfique
+17:Lame tueuse
+18:Lame mystère
+19:Kikuichimonji
+1A:Kusanagi
+1B:Cimeterre
+1C:??
+1D:??
+1E:??
+1F:Hache
+20:Hache large
+21:Lochabre
+22:Draco-hache  // 
+23:Hache de géant
+24:Hache Aspoc
+25:Hache de feu
+26:Hache d'Achéron
+27:??
+28:??
+29:??
+2A:??
+2B:Masse
+2C:Masse lourde
+2D:Bec de corbin
+2E:Masse cloutée
+2F:Masse bénie
+30:Masse gravité
+31:Masse sacrée
+32:Masse du chaos
+33:??
+34:??
+35:??
+36:??
+37:Baton
+38:Baguette
+39:Baguette bénie
+3A:Ankh béni
+3B:Batonnet psy
+3C:Baguette gel
+3D:Ankh sacré
+3E:Baton abyssal
+3F:Baton cristal
+40:Baton zodiaque
+41:Baton chamane
+42:??
+43:??
+44:??
+45:??
+46:??
+47:??
+48:??
+49:??
+4A:??
+4B:Armure de cuir
+4C:Armure psy
+4D:Cotte de Maille
+4E:Cuirasse
+4F:Plate
+50:Plate complète
+51:Armure esprit
+52:Ecaille dragon
+53:Plate abyssale
+54:Plate d'Ashura
+55:Harnois
+56:??
+57:??
+58:??
+59:Chemise
+5A:Gilet de voyage
+5B:Manteau
+5C:Robe mystique
+5D:Chemise elfique
+5E:Gilet en argent
+5F:Aqua-veste 
+60:Para-tonnerre
+61:Kimono
+62:Shinobi shojoku
+63:??
+64:??
+65:??
+66:??
+67:Robe
+68:Robe de voyage
+69:Robe de soie
+6A:Robe chinoise
+6B:Pourpoint
+6C:Robe de soirée
+6D:Robe bénie
+6E:Soutane magique
+6F:Robe enchantée
+70:Robe à plumes
+71:Robe de l'oracle
+72:??
+73:??
+74:??
+75:??
+76:Bouclier en bois
+77:Bouclier
+78:Bouclier de fer
+79:Ecu
+7A:Bouclier miroir
+7B:Draco-bouclier
+7C:Bouclier Gaia
+7D:??
+7E:??
+7F:Gants
+80:Gants en cuir
+81:Gantelets
+82:Vambrace
+83:Gants de fer
+84:Gants mystère
+85:Gants cloutés
+86:Gants vertueux
+87:??
+88:Bracelet cuir
+89:Bracelet
+8A:Bracelet lourd
+8B:Bracelet argent
+8C:Bracelet éthéré
+8D:Bracelet saint
+8E:Brac. gardien
+8F:??
+90:??
+91:Casque
+92:Heaume
+93:Chapel de fer
+94:Heaume d'acier
+95:Heaume d'argent
+96:Bassinet
+97:Casque à cornes
+98:Heaume psy
+99:??
+9A:??
+9B:??
+9C:Chapeau en cuir
+9D:Chapeau de bois
+9E:Cagoule
+9F:Couronne ornée
+A0:Cagoule de ninja
+A1:Chapeau-chance
+A2:Couronne foudre
+A3:Mitre
+A4:Chapeau-leurre
+A5:??
+A6:Tiare
+A7:Tiare d'argent
+A8:Tiare gardienne
+A9:Tiare de platine
+AA:Tiare mythril
+AB:Tiare soleil
+AC:??
+AD:??
+AE:??
+AF:??
+B0:??
+B1:??
+B2:??
+B3:??
+B4:Herbe
+B5:Noisette
+B6:Fiole
+B7:Potion
+B8:Eau Miracle
+B9:Bouteille vide
+BA:Cristal psy
+BB:Antidote
+BC:Elixir
+BD:Eau jouvence
+BE:??
+BF:Pain
+C0:Cookie
+C1:Pomme
+C2:Noix
+C3:Menthe
+C4:Poivre
+C5:??
+C6:??
+C7:??
+C8:Orbe de force
+C9:Goutte
+CA:Joyau de gel
+CB:Joyau kynétique
+CC:Gemme de stase
+CD:Balle d'ombre
+CE:Pierre de prise
+CF:Perle larcin  
+D0:??
+D1:??
+D2:??
+D3:??
+D4:??
+D5:??
+D6:??
+D7:??
+D8:??
+D9:??
+DA:??
+DB:??
+DC:Etoile Vénus
+DD:Etoile Mercure   
+DE:Etoile Mars 
+DF:Etoile Jupiter
+E0:Sac Mythril 
+E1:Petit joyau
+E2:Fumigène
+E3:Somnifère
+E4:Ticket de jeu
+E5:Porte bonheur
+E6:Oeil du dragon
+E7:Os
+E8:Ancre enchantée   
+E9:Mais
+EA:Clef des geôles   
+EB:Ticket bateau
+EC:Plume sacrée
+ED:Potion Lémuria
+EE:Goutte d'huile
+EF:Griffe de fouine
+F0:Graine roncière
+F1:Poudre cristal
+F2:Orbe noir
+F3:Cle rouge
+F4:Cle bleue
+F5:??
+F6:??
+F7:??
+F8:??
+F9:??
+FA:Gilet mythril
+FB:Chemise de soie
+FC:Chemise sport
+FD:??
+FE:??
+FF:??
+
+

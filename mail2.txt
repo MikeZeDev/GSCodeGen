@@ -1,0 +1,4 @@
+
+Ah oui, dans ma précépitation, j'ai oublié un détail.Pour l'ordre de récupération des djinn après une invocation, ça se passe à partir de 02000254.Pour chaque djinn possédé, une structure de 4 octets. Le 4° nous intéresse, puisqu'il vaut FF quand la condition du djinn est normale, et >0 quand il est en repos, la valeur indiquant son ordre dans la file d'attente.Pour les autres bytes, j'ai pas bien compris leur rôle, d'autant plus qu'ils retombent à 0 quand le djinn se repose... L'ordre des structure aussi m'échappe, elle n'est pas fixe. J'ai pas cherché plus que ça ... (je ne me sers pas vraiment des djinns).
+
+

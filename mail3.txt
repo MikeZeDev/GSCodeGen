@@ -1,0 +1,3 @@
+Pour me faire pardonner, je te fais fais un bien joli cadeau. Ci-joint deux tableaux que j'ai fais et qui liste tout ce qu'il faut savoir sur les djinns... ou presque.Concernant les djinns "réellement" récuppérés : :02000046:AAAAAFFFFFEEEEETTTTTSoi donc si on décompose en 10x8bits :02000046:TT TT ET EE EE FF FF AF AA AA(A=air,F=feu,E=Eau,T=Terre)Ce qui donne par ex pour avoir les 28 djinns dans gs1 :02000046:7F 00 F0 07 00 7F 00 F0 07 00Ou encore pour les 72 de gs2 :02000046:FF FF F3 FF 3F FF FF F3 FF 3FEn espèrant que ça t'aide dans ta quête du savoir absolu !
+
+

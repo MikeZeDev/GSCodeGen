@@ -1,0 +1,275 @@
+Adresse des items de Pavel: 02000B28
+
+un item se definit sur 2 bytes : 
+
+xxyy  
+xx: type de l'objet
+yy: quantité/equipé?
+
+la quantité est spéciale : 00 = 1 objet, 08 = 2, 0x10 = 3 et ainsi de suite (+1 objet <> + 8 valeur)
+yy est à 02 si l'objet est equipé (normalement pas cumulable avec un quantité autre que 1 (soit 00)
+Pour equiper un item multiple (si c'est possible) il faudrait ajouter quantité (0,0x8,0x10,etc) + 02 (flag "équipé")
+
+De plus les objets de la liste secondaire s'obtiennent grace a une combinaison spéciale ou yy = 01
+Ainsi pour obtenir l'anneau clérical vous devez mettre xx = 0C et yy = 01 (sinon l'item 0C est inexistant)
+
+
+Tableau des objets : 
+----------------------- 
+
+00:?? // Hyper bottes
+01:Epée Longue // Bottes de hâte
+02:Glaive //  Bottes fourrées
+03:Claymore // Bottes Tortues
+04:Espadon
+05:Shamshir
+06:Lame d'argent //Anneau Mystique
+07:Lame rouge  // Anneau Guerrier
+08:Lame artique // Anneau Repos
+09:Lame Gaia // Anneau de soin
+0A:Lame Solaire // Anneau licorne
+0B:Murasama (Maudit) // Anneau féerique
+0C:??  //  Anneau Clérical
+0D:??
+0E:??
+0F:Machette
+10:Epée courte // Epée géante
+11:Coutelas // Lame mythril
+12:Rapière // Levatine
+13:Rapière effilée // Epée obscure
+14:Ninja-to // Excalibur
+15:Epée de vitesse // Poignard
+16:Rapière elfique // Fer de l'âme
+17:Lame tueuse // Fer fougueux
+18:Lame mystère // Lame Hestia
+19:Kikuichimonji // Epée lumineuse
+1A:Masamune // Epée runique
+1B:Cimeterre // Fer vaporeux
+1C:??
+1D:??  // Rapière sylphe
+1E:?? // Epée embrasée
+1F:Hache  // Epée pirate
+20:Hache large // Epée corsaire
+21:Lochabre // Sabre pirate
+22:Draco-hache  // Epée hypnotique
+23:Hache de géant // Sabre brumeux
+24:Hache Aspoc // Lame Phaéton
+25:Hache de feu // Epée Tisiphone
+26:Hache d'Achéron
+27:?? // Hache d'Apollon
+28:?? // Hache de Gaia
+29:?? // Hache Stellaire
+2A:?? // Hache capitaine
+2B:Masse // Hache viking
+2C:Masse lourde // Faux
+2D:Bec de corbin // Hache Thémis
+2E:Masse cloutée // Hache puissante
+2F:Masse bénie // Hache Tartare
+30:Masse gravité
+31:Masse sacrée // Masse comète
+32:Masse du chaos // Masse atomique
+33:?? // Masse perfide
+34:?? // Masse maudite
+35:?? // Masse d'air
+36:?? // Masse montante
+37:Bâton // Masse Thanatos
+38:Baguette
+39:Baguette bénie // Bâton vaporeux
+3A:Ankh béni // Bâton de braise
+3B:Batonnet psy // Baguette noire
+3C:Baguette gel // Dracomasse
+3D:Ankh sacré // Bâton ardent
+3E:Bâton abyssal // Bâton maléfique
+3F:Bâton cristal // Bâton d'étude
+40:Bâton zodiaque // Pôle coupe-feu
+41:Bâton chamane // Bâton Atropos
+42:?? // Regle Lachiesis
+43:?? // Ankh Clotho
+44:?? // Bâton Anubis
+45:??
+46:?? // Trident 
+47:??
+48:?? // Armure astrale
+49:?? // Draco-haubert
+4A:?? // Haubert Chronos
+4B:Armure de cuir // Armure furtive
+4C:Armure psy // Armure Xylion
+4D:Cotte de Maille // Haubert Ixion
+4E:Cuirasse // Haubert fantôme
+4F:Plate // Armure Erebus
+50:Plate complète // Mailles Walkyrie
+51:Armure esprit
+52:Ecaille dragon // Gilet Magique
+53:Plate abyssale // Habit mythril
+54:Plate d'Ashura // Gilet Metallique
+55:Harnois // Veste sauvage
+56:?? // Robe florale
+57:?? // Veste de fête
+58:?? // Tunique Erinyes
+59:Chemise // Habit Triton
+5A:Gilet de voyage
+5B:Manteau // Draco-robe
+5C:Robe mystique // Robe Ardagh
+5D:Chemise elfique // Robe sainte
+5E:Gilet en argent // Soutane d'air
+5F:Aqua-veste // Robe Iris
+60:Para-tonnerre
+61:Kimono // Bouclier lunaire
+62:Shinobi shojoku // Draco-bouclier
+63:?? // Bouclier de feu
+64:?? // Terra-bouclier
+65:?? // Bouclier Cosmos
+66:?? // Bouclier Fujin
+67:Robe // Bouclier égide
+68:Robe de voyage
+69:Robe de soie // Aéro-gants
+6A:Robe chinoise // Gants de titan
+6B:Pourpoint // Gants big bang
+6C:Robe de soirée // Gants d'artisan
+6D:Robe bénie // Gants d'émeute
+6E:Soutane magique // Gants esprit
+6F:Robe enchantée
+70:Robe à plumes // Bracelet clair
+71:Robe de l'oracle // Brac. mythril
+72:?? // Bracelet osseux
+73:?? // Brac. joker
+74:?? // Bracelet Leda
+75:??
+76:Bouclier en bois // Draco-heaume
+77:Bouclier // Heaume mythril
+78:Bouclier de fer // Heaume terrible
+79:Ecu // Milléniheaume
+7A:Bouclier miroir // Heaume viking
+7B:Draco-bouclier // Grand heaume
+7C:Bouclier Gaia // Heaume Minerve
+7D:??
+7E:?? // Coiffe flottante
+7F:Gants // Coiffe curative
+80:Gants en cuir // Couronne piquée
+81:Gantelets // Masque Otafuku
+82:Vambrace // Masque Hiotoko
+83:Gants de fer // Diadème
+84:Gants mystère // Cagoule Alastor
+85:Gants cloutés
+86:Gants vertueux // Tiare pure
+87:?? // Tiare astrale
+88:Bracelet cuir // Tiare psychique
+89:Bracelet // Tiare perfide
+8A:Bracelet lourd // Tiare claire
+8B:Bracelet argent // Tiare brillante
+8C:Bracelet éthéré // Bande Berserker
+8D:Bracelet saint
+8E:Brac. gardien // Caraco divin
+8F:?? // Chemise florale
+90:?? // Chemise d'or
+91:Casque // Chemise
+92:Heaume  // Bottes de cuir
+93:Chapel de fer // Draco-bottes
+94:Heaume d'acier // Bottes-sureté
+95:Heaume d'argent // Grèves
+96:Bassinet // Grèves d'argent
+97:Casque à cornes // Sandales ninja
+98:Heaume psy // Bottes d'or
+99:?? // Anneau mystique
+9A:?? // Anneau stellaire
+9B:?? // Anneau-arôme
+9C:Chapeau en cuir // Anneau coloré
+9D:Chapeau de bois // Anneau-ame
+9E:Cagoule // Anneau-gardien
+9F:Couronne ornée // Anneau d'or
+A0:Cagoule de ninja 
+A1:Chapeau-chance // Epée rouillée
+A2:Couronne foudre // Epée rouillée
+A3:Mitre // Epée rouillée
+A4:Chapeau-leurre // Epée rouillée
+A5:?? // Hache rouillée
+A6:Tiare // // Hache rouillée
+A7:Tiare d'argent // Masse rouillée
+A8:Tiare gardienne // Masse rouillée
+A9:Tiare de platine // Barre rouilée
+AA:Tiare mythril // Barre rouillée
+AB:Tiare soleil // Barre rouillée
+AC:??
+AD:?? // Larme de pierre
+AE:?? // Poudre magique
+AF:?? // Plume sylphe
+B0:?? // Peau de dragon
+B1:?? // Coda de braise
+B2:?? // Coeur golem
+B3:?? // Argent mythril
+B4:Herbe // Matière obscure
+B5:Noisette //Orihalcon
+B6:Fiole
+B7:Potion  // Dent droite
+B8:Eau Miracle // Dent gauche
+B9:Bouteille vide // Dent centrale
+BA:Cristal psy
+BB:Antidote // Carte mystère
+BC:Elixir // Fouet de maitre
+BD:Eau jouvence //Tomegathericon
+BE:Potion Voilée
+BF:Pain
+C0:Cookie // Fongus curatif
+C1:Pomme // Fongus riant
+C2:Noix
+C3:Menthe // Idole dansante
+C4:Poivre // Belle pierre
+C5:?? // Etoffe rouge
+C6:Piquet d'attache // Lait
+C7:Presse cubique // Petite tortue
+C8:Orbe de force //Pierre verseau
+C9:Goutte // Miche de pain
+CA:Joyau de gel // Larme divine
+CB:Joyau kynétique // Clé des ruines
+CC:Gemme de stase // Boule magma
+CD:Balle d'ombre
+CE:Pierre de prise
+CF:Perle larcin 
+D0:Eclat sismique
+D1:Joyau de fouille
+D2:Eclat cyclonique
+D3:??
+D4:??
+D5:Broche dynamite
+D6:Meule
+D7:Jade flottant
+D8:??
+D9:Kinésilapis
+DA:??
+DB:
+DC:Etoile Vénus
+DD:Etoile Mercure   
+DE:Sac mythril
+DF:Sac mythril
+E0:Sac mythril
+E1:Petit joyau
+E2:Fumigène
+E3:Somnifère
+E4:Ticket de jeu
+E5:Porte bonheur
+E6:Oeil du dragon
+E7:Os
+E8:Ancre enchantée   
+E9:Mais
+EA:Clef des geôles   
+EB:Ticket bateau
+EC:Plume sacrée
+ED:Potion Lémuria
+EE:Goutte d'huile
+EF:Griffe de fouine
+F0:Graine roncière
+F1:Poudre cristal
+F2:Orbe noir
+F3:Cle rouge
+F4:Cle bleue
+F5:Sac mythril
+F6:Etoile Jupiter
+F7:Etoile Mars
+F8:??
+F9:??
+FA:Gilet mythril
+FB:Chemise de soie
+FC:Chemise sport
+FD:??
+FE:??
+FF:??
